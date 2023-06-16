@@ -1,9 +1,9 @@
 package pages;
 
+import com.codeborne.selenide.CollectionCondition;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class MainPage {
@@ -24,4 +24,5 @@ public class MainPage {
         $(".header-search-block button[type=submit]").click();
         return new ResultsSearchPage();
     }
+
 }
