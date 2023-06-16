@@ -9,6 +9,7 @@ public class SearchTests extends BaseTest {
 
     @Test
     public void check() {
-        new MainPage().setTextSearchString("Сахар");
+        new MainPage().setTextSearchString("Сахар")
+                .clickButtonSearch();
     }
 }

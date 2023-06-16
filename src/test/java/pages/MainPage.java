@@ -18,4 +18,9 @@ public class MainPage {
         $("input[type=search]").setValue(text);
         return this;
     }
+
+    @Step("Нажать на кнопку поиска")
+    public void clickButtonSearch() {
+        $(".header-search-block button[type=submit]").click();
+    }
 }
