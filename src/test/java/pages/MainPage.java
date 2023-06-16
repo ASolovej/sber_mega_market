@@ -20,7 +20,8 @@ public class MainPage {
     }
 
     @Step("Нажать на кнопку поиска")
-    public void clickButtonSearch() {
+    public ResultsSearchPage clickButtonSearch() {
         $(".header-search-block button[type=submit]").click();
+        return new ResultsSearchPage();
     }
 }
