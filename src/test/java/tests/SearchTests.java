@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
 @Tag("UI")
-@Link(name = "Test", value = "https://sbermegamarket.ru/")
 @Feature("Поиск товара")
-@Owner("Alexandr Solovyov")
 public class SearchTests extends BaseTest {
 
     @Story("Проверка поиска товара")
