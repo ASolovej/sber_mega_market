@@ -26,4 +26,11 @@ public class MainPage {
         return new ResultsSearchPage();
     }
 
+    @Step("Очистить строку поиска и проверить, что строка поиска пуста")
+    public MainPage clearSearch() {
+        navigation.clearSearch();
+        navigation.checkExistsButtonClear();
+        return this;
+    }
+
 }

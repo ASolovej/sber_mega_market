@@ -23,14 +23,14 @@ public class SearchTests extends BaseTest {
                 .checkEachProductContains("Сахар");
     }
 
-    @Story("Проверка поиска товара")
-    @DisplayName("Проверка работы поиска")
+    @Story("Очистка строки поиска")
+    @DisplayName("Проверка очистки строки поиска")
     @Severity(SeverityLevel.BLOCKER)
     @Test
-    public void checkAddProductToCart() {
+    public void checkClearStringSearch() {
         new MainPage()
                 .setTextInSearch("Сахар")
-                .clickButtonSearch();
+                .clearSearch();
     }
 
 }
