@@ -8,7 +8,7 @@ import pageComponents.Navigation;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class ResultsSearchPage {
-    Navigation navigation;
+    private Navigation navigation;
     public ResultsSearchPage() {
         navigation = new Navigation();
     }

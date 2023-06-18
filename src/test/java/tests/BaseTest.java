@@ -4,6 +4,8 @@ import attachment.Attach;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -12,6 +14,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
+@Link(name = "Test", value = "https://sbermegamarket.ru/")
+@Owner("Alexandr Solovyov")
 public class BaseTest {
 
     @BeforeAll
