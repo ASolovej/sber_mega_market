@@ -20,14 +20,15 @@ public class BaseTest {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "112");
         Configuration.pageLoadStrategy = "none";
-        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
-        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
+        Configuration.baseUrl = "https://sbermegamarket.ru/";
+//        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+//        Configuration.holdBrowserOpen = true;
     }
 
     @BeforeEach
