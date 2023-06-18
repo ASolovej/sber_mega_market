@@ -7,19 +7,30 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
 @Tag("UI")
+@Link(name = "Test", value = "https://sbermegamarket.ru/")
+@Feature("Поиск товара")
+@Owner("Alexandr Solovyov")
 public class SearchTests extends BaseTest {
 
-    @Feature("Поиск товара")
     @Story("Проверка поиска товара")
     @DisplayName("Проверка работы поиска")
-    @Owner("Alexandr Solovyov")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(name = "Test", value = "https://sbermegamarket.ru/")
     @Test
-    public void checkSearchResults() {
+    public void checkResultsSearch() {
         new MainPage()
-                .setTextSearchString("Сахар")
+                .setTextInSearch("Сахар")
                 .clickButtonSearch()
                 .checkEachProductContains("Сахар");
     }
+
+    @Story("Проверка поиска товара")
+    @DisplayName("Проверка работы поиска")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test
+    public void checkAddProductToCart() {
+        new MainPage()
+                .setTextInSearch("Сахар")
+                .clickButtonSearch();
+    }
+
 }
