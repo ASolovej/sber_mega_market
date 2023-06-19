@@ -35,7 +35,6 @@ public class BaseTest {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
         System.setProperty("webdriver.chrome.driver","path/to/driver/exe");
