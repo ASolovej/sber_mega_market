@@ -35,11 +35,6 @@ public class BaseTest {
                 "enableVNC", true,
                 "enableVideo", true
         ));
-        Configuration.browserCapabilities = capabilities;
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        WebDriver driver =new ChromeDriver(options);
     }
 
     @BeforeEach
