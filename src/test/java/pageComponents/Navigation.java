@@ -13,6 +13,7 @@ public class Navigation {
     private static final SelenideElement SEARCH = $("input[type=search]");
     private static final SelenideElement BUTTON_SEARCH = $(".header-search-block button[type=submit]");
     public void setTextSearchString(String text) {
+        SEARCH.click();
         SEARCH.setValue(text).shouldHave(Condition.value(text));
     }
 
