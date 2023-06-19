@@ -14,7 +14,7 @@ import pages.MainPage;
 public class HomePageTests extends BaseTest{
 
     @Story("Присутствие на главной страницы названия логотипа")
-    @DisplayName("Проверка очистки строки поиска")
+    @DisplayName("Проверка присутствия названия логотипа в конце страницы")
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkExistsLogo() {
