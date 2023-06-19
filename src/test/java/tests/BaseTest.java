@@ -11,6 +11,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
@@ -32,6 +35,12 @@ public class BaseTest {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
+        System.setProperty("webdriver.chrome.driver","path/to/driver/exe");
+        WebDriver driver =new ChromeDriver(options);
+
 //        Configuration.holdBrowserOpen = true;
     }
 
