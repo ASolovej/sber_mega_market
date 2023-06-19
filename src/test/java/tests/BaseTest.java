@@ -28,6 +28,7 @@ public class BaseTest {
         Configuration.browserVersion = System.getProperty("version", "112");
         Configuration.pageLoadStrategy = "none";
         Configuration.baseUrl = "https://sbermegamarket.ru/";
+
         Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -35,12 +36,10 @@ public class BaseTest {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
-        System.setProperty("webdriver.chrome.driver","path/to/driver/exe");
         WebDriver driver =new ChromeDriver(options);
-
-//        Configuration.holdBrowserOpen = true;
     }
 
     @BeforeEach
