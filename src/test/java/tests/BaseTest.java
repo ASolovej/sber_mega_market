@@ -23,6 +23,7 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
+        WebDriver driver;
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "112");
@@ -35,6 +36,15 @@ public class BaseTest {
                 "enableVNC", true,
                 "enableVideo", true
         ));
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars",
+                "disable-translate", "disable-notifications",
+                "disable-popup-blocking", "ignore-certificate-errors");
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+        Configuration.browserCapabilities = capabilities;
+
     }
 
     @BeforeEach
