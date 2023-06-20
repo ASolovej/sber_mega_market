@@ -13,7 +13,7 @@ import pages.MainPage;
 @Feature("Элементы главной страницы")
 public class HomePageTests extends BaseTest{
 
-    @Story("Присутствие на главной страницы названия логотипа")
+    @Story("Присутствие на главной странице названия логотипа")
     @DisplayName("Проверка присутствия названия логотипа в конце страницы")
     @Severity(SeverityLevel.NORMAL)
     @Test
