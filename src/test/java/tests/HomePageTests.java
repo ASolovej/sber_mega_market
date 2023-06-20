@@ -19,6 +19,7 @@ public class HomePageTests extends BaseTest{
     @Test
     public void checkExistsLogo() {
         new MainPage()
+                .openMainPage()
                 .scrollDownToLogo()
                 .checkNameLogo();
     }
