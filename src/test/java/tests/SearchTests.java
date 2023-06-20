@@ -16,6 +16,7 @@ public class SearchTests extends BaseTest {
     @Test
     public void checkResultsSearch() {
         new MainPage()
+                .openMainPage()
                 .setTextInSearch("Сахар")
                 .clickButtonSearch()
                 .checkEachProductContains("Сахар");
@@ -27,6 +28,7 @@ public class SearchTests extends BaseTest {
     @Test
     public void checkClearStringSearch() {
         new MainPage()
+                .openMainPage()
                 .setTextInSearch("Сахар")
                 .clearSearch();
     }

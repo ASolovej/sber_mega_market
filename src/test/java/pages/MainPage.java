@@ -13,8 +13,12 @@ public class MainPage {
     private static final SelenideElement LOGOTIP = $(".copyright-block__logo");
     public MainPage() {
         navigation = new Navigation();
-        step("Открыть сайт sbermegamarket.ru",
-                () -> {open("https://sbermegamarket.ru/");});
+    }
+
+    @Step("Открыть сайт https://sbermegamarket.ru/")
+    public MainPage openMainPage() {
+        open("https://sbermegamarket.ru/");
+        return this;
     }
 
     @Step("Ввести в строку поиска: {text}")
