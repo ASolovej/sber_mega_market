@@ -36,6 +36,15 @@ public class BaseTest {
                 "enableVNC", true,
                 "enableVideo", true
         ));
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars",
+                "disable-translate", "disable-notifications",
+                "disable-popup-blocking", "ignore-certificate-errors");
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+        Configuration.browserCapabilities = capabilities;
+
     }
 
     @BeforeEach
