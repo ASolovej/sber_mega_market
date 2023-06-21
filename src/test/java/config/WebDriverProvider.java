@@ -20,7 +20,7 @@ public class WebDriverProvider {
         Configuration.baseUrl = "https://sbermegamarket.ru/";
         Configuration.pageLoadTimeout = 60000;
 
-//        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
+        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
