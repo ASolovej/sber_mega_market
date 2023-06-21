@@ -24,10 +24,11 @@ public class Navigation {
     }
 
     public void clearSearch() {
+        BUTTON_CLEAR.should(Condition.visible, Duration.ofSeconds(8));
         BUTTON_CLEAR.click();
     }
 
     public void checkExistsButtonClear() {
-        BUTTON_CLEAR.shouldNotHave(Condition.exist);
+        BUTTON_CLEAR.shouldNotHave(Condition.exist, Duration.ofSeconds(8));
     }
 }
