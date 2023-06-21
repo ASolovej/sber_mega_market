@@ -40,7 +40,7 @@ public class WebDriverProvider {
             options.addArguments("disable-infobars",
                     "disable-translate", "disable-notifications",
                     "disable-popup-blocking", "ignore-certificate-errors");
-            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+            capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
         }
 
         Configuration.browserCapabilities = capabilities;
