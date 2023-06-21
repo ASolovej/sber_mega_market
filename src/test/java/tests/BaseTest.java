@@ -21,7 +21,8 @@ import java.util.Map;
 public class BaseTest {
     @BeforeAll
     public static void setUp() {
-        WebDriverProvider.createWebDriver();
+        WebDriverProvider driverProvider = new WebDriverProvider();
+        driverProvider.createWebDriver();
     }
 
     @BeforeEach

@@ -13,21 +13,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class WebDriverProvider {
-    public static void createWebDriver() {
+    public void createWebDriver() {
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "112");
         Configuration.baseUrl = "https://sbermegamarket.ru/";
         Configuration.pageLoadTimeout = 60000;
 
-        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
+//        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
 
-        if (WebDriverRunner.getWebDriver() instanceof FirefoxDriver) {
+        if (Configuration.browser.equals("chrome")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("disable-infobars",
                     "disable-translate", "disable-notifications",
@@ -35,7 +35,7 @@ public class WebDriverProvider {
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         }
 
-        if (WebDriverRunner.getWebDriver() instanceof ChromeDriver) {
+        if (Configuration.browser.equals("firefox")) {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("disable-infobars",
                     "disable-translate", "disable-notifications",
