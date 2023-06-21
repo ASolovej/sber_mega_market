@@ -113,22 +113,6 @@ gradle clean test
 <img src="images/screenshots/AllureSuitsUI.png">
 </p>
 
-### Прохождение API-тестов
-
-<p align="center">
-<img src="images/screenshots/AllureSuitsApi.png">
-</p>
-
-### Прохождение mobile-тестов
-
-<p align="center">
-<img src="images/screenshots/AllureSuitsMobile.png">
-</p>
-
-<a id="testops"></a>
-
-## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1846/dashboards)
-
 ### Прохождение UI-тестов
 
 <p align="center">
@@ -141,27 +125,6 @@ gradle clean test
 <img src="images/screenshots/TestOpsManualCases.png">
 </p>
 
-### Прохождение API-тестов
-<p align="center">
-<img src="images/screenshots/TestOpsLaunchApi.png">
-</p>
-
-### Прохождение mobile-тестов
-
-<p align="center">
-<img src="images/screenshots/TestOpsLaunchMobile.png">
-</p>
-
-<a id="jira"></a>
-
-## Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-514)
-
-<p align="center">
-<img src="images/screenshots/JiraIssue.png">
-</p>
-
-<a id="telegram"></a>
-
 ## Уведомления в Telegram с использованием бота
 
 ### Уведомление о прохождении UI-тестов
@@ -170,20 +133,6 @@ gradle clean test
 <img src="images/screenshots/TelegramBotUI.png">
 </p>
 
-### Уведомление о прохождении API-тестов
-
-<p align="center">
-<img src="images/screenshots/TelegramBotApi.png">
-</p>
-
-### Уведомление о прохождении mobile-тестов
-
-<p align="center">
-<img src="images/screenshots/TelegramBotMobile.png">
-</p>
-
-<a id="selenoidvideo"></a>
-
 ## Пример прогона UI-теста в Selenoid
 
 К каждому тесту в отчете прилагается видео.
@@ -191,11 +140,3 @@ gradle clean test
   <img src="images/video/VideoGif.gif">
 </p>
 
-<a id="browserstackvideo"></a>
-
-## Пример прогона mobile-теста в Browserstack
-
-К каждому тесту в отчете прилагается видео.
-<p align="center">
-  <img src="images/video/MobileVideoGif.gif">
-</p>
