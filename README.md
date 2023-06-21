@@ -105,7 +105,7 @@ gradle clean test
 
 <a id="allure"></a>
 
-## Отчеты в [Allure Report](https://jenkins.autotests.cloud/job/017-maryregen-java-automation-tests-for-hh/16/allure/)
+## Отчеты в [Allure Report](http://109.106.139.39:7080/job/sber_mega_market/49/allure/)
 
 ### Прохождение UI-тестов
 
