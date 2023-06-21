@@ -4,6 +4,7 @@ import attachment.Attach;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.WebDriverProvider;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -18,30 +19,10 @@ import java.util.Map;
 @Link(name = "Test", value = "https://sbermegamarket.ru/")
 @Owner("Alexandr Solovyov")
 public class BaseTest {
-
     @BeforeAll
     public static void setUp() {
-        Configuration.browserSize = System.getProperty("size", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "112");
-        Configuration.baseUrl = "https://sbermegamarket.ru/";
-        Configuration.pageLoadTimeout = 60000;
-
-        Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("disable-infobars",
-                "disable-translate", "disable-notifications",
-                "disable-popup-blocking", "ignore-certificate-errors");
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-
-        Configuration.browserCapabilities = capabilities;
+        WebDriverProvider driverProvider = new WebDriverProvider();
+        driverProvider.createWebDriver();
     }
 
     @BeforeEach
