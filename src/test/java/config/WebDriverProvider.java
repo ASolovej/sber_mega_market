@@ -35,14 +35,6 @@ public class WebDriverProvider {
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         }
 
-        if (Configuration.browser.equals("firefox")) {
-            FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("disable-infobars",
-                    "disable-translate", "disable-notifications",
-                    "disable-popup-blocking", "ignore-certificate-errors");
-            capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
-        }
-
         Configuration.browserCapabilities = capabilities;
     }
 }
