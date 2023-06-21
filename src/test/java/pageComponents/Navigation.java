@@ -6,6 +6,8 @@ import io.qameta.allure.Step;
 import pages.MainPage;
 import pages.ResultsSearchPage;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class Navigation {
@@ -13,6 +15,7 @@ public class Navigation {
     private static final SelenideElement SEARCH = $("input[type=search]");
     private static final SelenideElement BUTTON_SEARCH = $(".header-search-block button[type=submit]");
     public void setTextSearchString(String text) {
+        SEARCH.should(Condition.visible, Duration.ofSeconds(8));
         SEARCH.setValue(text).shouldHave(Condition.value(text));
     }
 

@@ -23,7 +23,6 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
-        WebDriver driver;
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "112");
