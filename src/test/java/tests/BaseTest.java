@@ -11,8 +11,6 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
@@ -26,8 +24,8 @@ public class BaseTest {
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "112");
-        Configuration.pageLoadStrategy = "none";
         Configuration.baseUrl = "https://sbermegamarket.ru/";
+        Configuration.pageLoadTimeout = 60;
 
         Configuration.remote = System.getProperty("selenoid", "http://localhost:4444/") + "wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -36,6 +34,7 @@ public class BaseTest {
                 "enableVideo", true
         ));
 
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("disable-infobars",
                 "disable-translate", "disable-notifications",
@@ -43,7 +42,6 @@ public class BaseTest {
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
         Configuration.browserCapabilities = capabilities;
-
     }
 
     @BeforeEach

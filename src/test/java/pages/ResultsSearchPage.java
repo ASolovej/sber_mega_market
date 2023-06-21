@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ResultsSearchPage {
     private Navigation navigation;
-    private ElementsCollection BUTTONS_BUY = $$(".catalog-buy-button__button");
+    private ElementsCollection BUTTONS_BUY = $$(".catalog-buy-button .catalog-buy-button__button");
     private SelenideElement BUTTON_GO_TO_CART = $(Selectors.byText("Перейти в корзину"));
     public ResultsSearchPage() {
         navigation = new Navigation();

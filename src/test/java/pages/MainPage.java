@@ -6,7 +6,6 @@ import io.qameta.allure.Step;
 import pageComponents.Navigation;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class MainPage {
     private Navigation navigation;
