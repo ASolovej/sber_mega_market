@@ -9,11 +9,8 @@
 * <a href="#console">Запуск тестов из терминала</a>
 * <a href="#jenkins">Запуск тестов в Jenkins</a>
 * <a href="#allure">Отчеты в Allure</a>
-* <a href="#testops">Интеграция с Allure TestOps</a>
-* <a href="#testops">Интеграция с Jira</a>
 * <a href="#telegram">Уведомления в Telegram с использованием бота</a>
 * <a href="#selenoidvideo">Пример прогона теста в Selenoid</a>
-* <a href="#browserstackvideo">Пример прогона теста в Browserstack</a>
 
 <a id="description"></a>
 
@@ -75,6 +72,7 @@ Allure-отчет включает в себя:
 - [ ] Проверка поиска товара
 - [ ] Проверка очистки строки поиска
 - [ ] Проверка присутствиея на главной странице названия логотипа
+- [ ] Проверка добавления товара в корзину
 
 ### Мануальные проверки
 
@@ -89,70 +87,17 @@ Allure-отчет включает в себя:
 #### Для UI-тестов
 
 ```
-./gradlew clean ui_tests -Denv=local
-```
-
-#### Для API-тестов
-
-```
-./gradlew clean api_tests 
-```
-
-#### Для MOBILE-тестов
-
-```
-./gradlew clean mobile_tests -DdeviceHost=emulator
-```
-
-### Удаленный запуск тестов
-
-Выбираем опции Gradle в зависимости от типа запускаемых тестов: 
-* UI-тесты запускаем с передачей <code>BROWSER_PLATFORM</code>, <code>BROWSER_VERSION</code>, 
-<code>BROWSER_SIZE</code>, <code>REMOTE_URL</code>
-* API-тесты запускаем без параметризации
-* Mobile-тесты запускаем с `deviceHost` (`browserstack`)
-
-```
-bash run.sh [api_tests|ui_tests|mobile_tests]
-```
-
-Для запуска тестов локально или удалённо, требуется указать вид теста первым параметром. Далее, с помощью переменных
-окружения (см. ниже), сконфигурировать запуск тестов.
-
-> `${BROWSER}` - комбинация браузера и версии (_по умолчанию - <code>chrome 100.0</code>_).
->
-> `${BROWSER_SIZE}` - размер окна браузера (_по умолчанию - <code>1366x768</code>_).
->
-> `${REMOTE_URL}` - адрес удаленного сервера, на котором будут запускаться тесты.
-
-Например, для запуска API-тестов:
-
-```
-bash run.sh api_tests
-```
-
-Для запуска UI-тестов локально:
-
-```
-BROWSER="chrome 112.0" BROWSER_SIZE="1920x1080" bash run.sh ui_tests
-```
-
-Для запуска UI-тестов удалённо:
-
-```
-BROWSER="chrome 112.0" BROWSER_SIZE="1920x1080" REMOTE_URL="http://selenium.webdriver.tld:4444/wd/hub" bash run.sh ui_tests
+gradle clean test
 ```
 
 <a id="jenkins"></a>
 
-## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/017-maryregen-java-automation-tests-for-hh/)
+## Запуск тестов в [Jenkins](http://109.106.139.39:7080/job/sber_mega_market/)
 
 1. Для запуска сборки необходимо перейти в раздел **Собрать с параметрами**
 2. Запуская ui-тесты, необходимо указать параметры для сборки (путем выбора из списка или прямым указанием значения) и
-   в <code>TEST_TYPE</code> выбрать ui-tests.
-3. Запуская api-тесты или mobile-тесты, можно оставить все предзаполненные поля, поменяв <code>TEST_TYPE</code>
-   соответственно на api_tests или mobile_tests.
-4. Нажать кнопку **Собрать**.
+   в <code>TASK</code> выбрать test.
+3. Нажать кнопку **Собрать**.
 
 <p align="center">
 <img src="images/screenshots/JenkinsJob.png"/></a>
