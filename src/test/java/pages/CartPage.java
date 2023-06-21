@@ -13,7 +13,7 @@ public class CartPage {
     private ElementsCollection PRODUCTS_TITLE = $$(".good__title");
     @Step("Проверить, что первый добавленный товар содержит в названии: {text}")
     public CartPage checkTitleProductInCart(String text) {
-        PRODUCTS_TITLE.first().shouldHave(Condition.text(text), Duration.ofSeconds(8));
+        PRODUCTS_TITLE.first().shouldHave(Condition.text(text));
         return this;
     }
 }

@@ -11,11 +11,10 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Navigation {
-    private static final SelenideElement BUTTON_CLEAR = $(".header-search-form__cancel-button");
-    private static final SelenideElement SEARCH = $("input[type=search]");
+    private static final SelenideElement BUTTON_CLEAR = $(".header-search-block").$(".header-search-form__cancel-button");
+    private static final SelenideElement SEARCH = $(".search-field input[type=search]");
     private static final SelenideElement BUTTON_SEARCH = $(".header-search-block button[type=submit]");
     public void setTextSearchString(String text) {
-        SEARCH.should(Condition.visible, Duration.ofSeconds(8));
         SEARCH.setValue(text).shouldHave(Condition.value(text));
     }
 
@@ -24,7 +23,6 @@ public class Navigation {
     }
 
     public void clearSearch() {
-        BUTTON_CLEAR.should(Condition.visible, Duration.ofSeconds(8));
         BUTTON_CLEAR.click();
     }
 
