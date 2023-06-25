@@ -44,7 +44,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = System.getProperty("selenoid", "http://localhost:4444/") + "video/" + sessionId() + ".mp4";
+        String videoUrl = System.getProperty("remote", "http://localhost:4444") + "/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {

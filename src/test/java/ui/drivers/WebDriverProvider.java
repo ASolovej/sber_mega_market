@@ -1,6 +1,5 @@
 package ui.drivers;
 
-import com.codeborne.selenide.Config;
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
