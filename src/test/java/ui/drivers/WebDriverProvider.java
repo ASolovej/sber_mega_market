@@ -26,7 +26,7 @@ public class WebDriverProvider {
                 "enableVideo", true
         ));
 
-        if (System.getProperty("env").equals(null)) {
+        if (System.getProperty("env").equals("remote")) {
             Configuration.remote = config.getRemote() + "/wd/hub";
         }
 
