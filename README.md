@@ -101,7 +101,7 @@ gradle clean test_ui -Denv=local
 4. Нажать кнопку **Собрать**.
 
 <p align="center">
-<img src="images/screenshots/JenkinsJob.png"/></a>
+<img src="images/screenshots/JenkinsJob_.png"/></a>
 </p>
 
 <a id="allure"></a>
