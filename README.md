@@ -126,6 +126,6 @@ gradle clean test_ui -Denv=local
 
 К каждому тесту в отчете прилагается видео.
 <p align="center">
-  <img src="images/video/VideoGif.gif">
+  <img src="images/video/Video.gif">
 </p>
 
