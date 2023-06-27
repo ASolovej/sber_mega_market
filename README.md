@@ -111,7 +111,7 @@ gradle clean test_ui -Denv=local
 ### Прохождение UI-тестов
 
 <p align="center">
-<img src="images/screenshots/AllureSuitsUI.png">
+<img src="images/screenshots/AllureSuitsUI_.png">
 </p>
 
 ## Уведомления в Telegram с использованием бота
@@ -119,7 +119,7 @@ gradle clean test_ui -Denv=local
 ### Уведомление о прохождении UI-тестов
 
 <p align="center">
-<img src="images/screenshots/TelegramBotUI.png">
+<img src="images/screenshots/TelegramBotUI_.png">
 </p>
 
 ## Пример прогона UI-теста в Selenoid
