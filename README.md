@@ -113,18 +113,6 @@ gradle clean test_ui -Denv=local
 <img src="images/screenshots/AllureSuitsUI.png">
 </p>
 
-### Прохождение UI-тестов
-
-<p align="center">
-<img src="images/screenshots/TestOpsLaunchUI.png">
-</p>
-
-### Пример мануального тест-кейса
-
-<p align="center">
-<img src="images/screenshots/TestOpsManualCases.png">
-</p>
-
 ## Уведомления в Telegram с использованием бота
 
 ### Уведомление о прохождении UI-тестов
