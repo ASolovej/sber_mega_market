@@ -18,7 +18,7 @@ public class WebDriverProvider {
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getVersion();
         Configuration.baseUrl = "https://sbermegamarket.ru/";
-        Configuration.pageLoadTimeout = 60000;
+        Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
