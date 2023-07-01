@@ -12,7 +12,7 @@ public class Navigation {
     private static final SelenideElement SEARCH = $(".search-field input[type=search]");
     private static final SelenideElement BUTTON_SEARCH = $(".header-search-block button[type=submit]");
     public void setTextSearchString(String text) {
-        BUTTON_SEARCH.$(".svg-icon").should(Condition.visible, Duration.ofSeconds(10));
+        BUTTON_SEARCH.$(".svg-icon").should(Condition.image, Duration.ofSeconds(10));
         SEARCH.setValue(text).shouldHave(Condition.value(text));
     }
 
