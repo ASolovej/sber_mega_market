@@ -21,7 +21,7 @@ public class Navigation {
     }
 
     public void clearSearch() {
-        BUTTON_CLEAR.click();
+        BUTTON_CLEAR.should(Condition.visible, Duration.ofSeconds(10)).click();
     }
 
     public void checkExistsButtonClear() {
